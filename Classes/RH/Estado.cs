@@ -27,5 +27,13 @@ namespace FirstWindowsDesktopDomain
             Estado.EstadoList.Add(new Estado(4, "SP"));
         }
 
+        public static int GetIndexEstado(string uf)
+        {   
+            Estado estado = EstadoList.Find(x => x.Sigla == uf);
+            int indexEstado = estado.Id;
+
+            return indexEstado;
+        }
+
     }
 }
